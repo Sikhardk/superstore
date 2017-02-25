@@ -1,0 +1,15 @@
+
+<%= form_tag :action => 'search' do %>
+ 
+<% if @category.blank? %>
+	<p>There are not any books currently in the system.</p>
+<% end -%>
+
+<p>Category</p>
+	<%= select_tag "category_id", options_for_select( @category.collect {|d| [ d.name, d.id ] }) %>
+
+<p>    
+<%= submit_tag "Search" %>
+</p>
+
+<% end %>

@@ -1,0 +1,13 @@
+
+<%= form_for :article do |f| %>
+ <p>
+  <%= f.label :Category %><br>	<%= f.select :temperature, [['Hot','hot'],['Medium','medium'],['Cold','cold']] %>
+</p>
+<% if @product.blank? %>
+<p>There are not any books currently in the system.</p>
+<% end -%>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

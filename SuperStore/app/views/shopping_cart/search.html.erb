@@ -1,0 +1,15 @@
+ <p>Products Matching selected category</p>
+ <table width="80%" border="1">
+  <% @results.each_slice(1) do |row| %>
+    <tr> 
+       <% row.each do |product| %>
+         <td><%= product.name %> <b> <%= link_to 'View', {:action => 'details', :id => product.id} %></b> </td>
+       <% end %>
+    </tr>
+  <% end %>
+</table>
+
+
+
+
+

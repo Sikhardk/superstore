@@ -1,0 +1,9 @@
+
+development:
+  adapter: mysql2
+  encoding: utf8
+  database: superstore
+  pool: 5
+  username: root
+  password: pwd
+  socket: /tmp/mysql.sock
